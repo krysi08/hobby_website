@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="kontakt.html" class="active">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Skontaktuj się z nami</h1>
+  <form id="contactForm">
+    <label for="email">E-Mail:</label>
+    <input type="text" id="email" name="email" placeholder="Wpisz swój adres e-mail" required />
+
+    <label for="temat">Temat wiadomości:</label>
+    <select id="temat" name="temat">
+      <option value="">-- Wybierz temat --</option>
+      <option value="pytanie">Pytanie</option>
+      <option value="wspolpraca">Współpraca</option>
+      <option value="inne">Inne</option>
+    </select>
+
+    <label for="wiadomosc">Wiadomość:</label>
+    <textarea id="wiadomosc" name="wiadomosc" rows="1" placeholder="Wpisz treść wiadomości" required></textarea>
+
+    <input type="submit" value="Wyślij" />
+  </form>
+  <p id="errorMessage" class="error"></p>
+  <p id="successMessage" class="success"></p>
+</main>
+
+<footer>
+  <p>Krystian Zawadzki</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
+<button onclick="toggleForm()">Pokaż/Ukryj formularz</button>
+<button id="colorBtn">Zmień kolor tła</button>
+<div id="clock" style="margin-top: 10px; font-weight: bold;"></div>
